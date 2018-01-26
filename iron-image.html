@@ -295,7 +295,7 @@ Custom property | Description | Default
       },
 
       _imgOnLoad: function() {
-        if (this.$.img.src !== this._resolveSrc(this.src)) {
+        if (decodeURI(this.$.img.src) !== this._resolveSrc(this.src)) {
           return;
         }
 
@@ -305,7 +305,7 @@ Custom property | Description | Default
       },
 
       _imgOnError: function() {
-        if (this.$.img.src !== this._resolveSrc(this.src)) {
+        if (decodeURI(this.$.img.src) !== this._resolveSrc(this.src)) {
           return;
         }
 
